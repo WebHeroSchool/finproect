@@ -18,6 +18,7 @@ body {
   height: 39px;
   background: url('img/Vector.png');
   margin-top: 63px;
+
 }
 
 .menu{
@@ -89,7 +90,6 @@ body {
   position: absolute; 
   font-family: "PT Serif";
   font-style: normal;
-  font-weight: bold;  
   line-height: 265px;  
   color: #F8EEE4;
   opacity: 0.4;
