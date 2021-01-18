@@ -1,0 +1,46 @@
+.wrapper {
+  margin: auto;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: url(img/fon.svg);
+  color: #F8EEE4;
+}
+
+.logo {
+  width: 104px;
+  height: 39px;
+  background: url('img/Vector.svg');
+}
+
+.menu{
+  display:flex;
+  align-items: center;
+  float: right
+}
+
+.menu__item {
+ 
+  width: 63px;
+  height: 20px;
+  left: calc(50% - 63px/2 + 207.5px);
+  top: 75px;
+  font-family: Museo Sans Cyrl;
+  font-size: 16px;
+  line-height: 19px;  
+  margin-right: 24px;
+  color: #F8EEE4;
+  text-decoration: none;
+}
+
+.menu__item:last-child {
+  margin-right: 241px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+
