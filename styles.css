@@ -24,7 +24,7 @@ body {
   display:flex;
   align-items: center;
   float: right;
-  margin: -27px 60px 0 0;
+  margin: -27px 56px 0 0;
 }
 
 .menu__item { 
@@ -35,10 +35,17 @@ body {
   font-family: "Museo Sans";
   font-size: 16px;
   line-height: 19px;  
-  margin-right: 28px;
+  margin-right: 26px;
   color: #F8EEE4;
   text-decoration: none;
   cursor: pointer;
+}
+.menu__item:hover {
+  background-color: #F8EEE4;
+  color: #104721;
+  transition: opacity 0.5s;
+  opacity: 0.5;
+  border-radius: 10px;
 }
 
 .menu__item:last-child {
@@ -138,9 +145,23 @@ body {
   margin-left: 15px;
 }
 
+.main__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.7s;
+}
+
 @media screen and (max-width:768px) {
+  .wrapper{
+    padding-left: 17px;
+  }
+
+  .header{
+    padding-left: 24px;
+  }
+
   .logo {
     background: url('img/Vector.png') no-repeat top left;
+    margin-top: 42px;
   }
 
   #menu__toggle {
@@ -155,12 +176,42 @@ body {
     display: flex;
     align-items: center;
     position: fixed;
-    top: 28px;
+    top: 52px;
     width: 26px;
     height: 26px;
     cursor: pointer;
     z-index: 1;
-    right: 6%;
+    right: 12%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .main__title {
+    font-size: 170px;
+    margin-top: 16px;
+  }
+
+  .main__ttl {
+    margin-top: 179px;
+    font-size: 60px;
+  }
+
+  .main__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    width: 293px;
+    height: 87px;
+    margin-top: 302px;
+    text-indent: 11px;
+    margin-left: 18px;
+  }
+
+  .main__button {
+    margin-top: 18px;
+    margin-left: 59px;
   }
 
   .menu__btn > span,
@@ -170,7 +221,7 @@ body {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: ##FCF5ED;
+    background-color: #FCF5ED;
   }
 
   .menu__btn > span::before {
@@ -196,6 +247,7 @@ body {
     list-style: none;
     text-align: center;
     background-color: #E5E5E5;
+    transition-duration: .25s;
   }
 
   .menu__item_burger {
@@ -207,13 +259,15 @@ body {
     text-decoration: none;
     display: inline-block;
     padding-bottom: 24px;
+    padding-right: 16px;
+    font-weight: 700;
+    transition-duration: .25s;
   }
 
-  .menu__item_burger: hover {
-    background: rgba(0,0,0,0);
-    color: #3a7999;
-    box-shadow: inset 0 0 0 3px #3a7999;
+  .menu__item_burger:hover {
+    background-color: #E5E5E5;
   }
+
 
   #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
@@ -236,12 +290,7 @@ body {
   .menu__btn > span::after {
     transition-duration: .25s;
   }
-  .menu__box {
-    transition-duration: .25s;
-  }
-  .menu__item_burger {
-    transition-duration: .25s;
-  }
+  
 
   .inner{
     display: none;
@@ -253,6 +302,7 @@ body {
   width: 10%;
   background-size: cover;
   }
+
 }
 
 @media screen and (min-width:1025px) and (max-width:1366px) {
