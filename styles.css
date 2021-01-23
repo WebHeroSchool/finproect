@@ -5,7 +5,6 @@
   width: 100%;
 }
 
-
 body {
   margin: 0;
   background: url(img/fon.png);
@@ -20,24 +19,32 @@ body {
   margin-top: 63px;
 }
 
-.menu{
+.menu {
   display:flex;
   align-items: center;
   float: right;
-  margin: -3% 2% 0px -2%;
+  margin: -27px 56px 0 0;
 }
 
 .menu__item { 
-  width: 36px;
+  width: 100%;
   height: 20px;
   left: calc(50% - 36px/2 + 134px);
   top: 75px;
   font-family: "Museo Sans";
   font-size: 16px;
   line-height: 19px;  
-  margin-right: 24px;
+  margin-right: 26px;
   color: #F8EEE4;
   text-decoration: none;
+  cursor: pointer;
+}
+.menu__item:hover {
+  background-color: #F8EEE4;
+  color: #104721;
+  transition: opacity 0.5s;
+  opacity: 0.5;
+  border-radius: 10px;
 }
 
 .menu__item:last-child {
@@ -50,8 +57,8 @@ body {
 
 .inner {
   margin: auto;
-  margin-top: 184px;
-  width: 52%;
+  margin-top: 177px;
+  width: 54%;
   float: right;
   display: flex;
 }
@@ -61,6 +68,7 @@ body {
   height: 300px;
   background-image: url(img/1.png);
   display: inline-block;
+  margin-right: 24px;
 }
 .userpic {
   width: 202px;
@@ -68,6 +76,7 @@ body {
   background-image: url(img/2.png);
   display: inline-block;
   margin-top: 3%;
+  margin-right: 24px;
 }
 .image {
   width: 181px;
@@ -75,28 +84,31 @@ body {
   background-image: url(img/3.png);
   display: inline-block;  
   margin-top: 3%;
+  background-size: contain;
 }
 
 .main {
   display: inline-block;
-  width: 48%;
+  width: 40%;
   position: relative;
 }
 
-.main_title {
+.main__title {
   font-size: 200px;
   margin: 0;
+  margin-top: 94px;
   position: absolute; 
   font-family: "PT Serif";
   font-style: normal;
-  font-weight: bold;  
   line-height: 265px;  
   color: #F8EEE4;
   opacity: 0.4;
 }
 
-.main_ttl {
+.main__ttl {
   margin: 0;
+  margin-top: 257px;
+  margin-left: 58px;
   position: absolute;
   font-family: "PT Serif";
   font-style: normal;
@@ -106,21 +118,300 @@ body {
   color: #F8EEE4;
 }
 
-.main_subtitle {
-  margin-top: 260px;
+.main__subtitle {
+  margin-top: 365px;
+  margin-left: 14px;
   width: 399px;
   height: 58px;
-  font-family: "Museo Sans"
+  font-family: "Museo Sans";
   font-size: 16px;
   line-height: 19px;
 }
 
-.main_button {
-  width: 86px;
-  height: 20px;
+.main__button {
+  position: absolute;
+  width: 209px;
+  height: 44px;
+  background: #D4BEA3;
+  border-radius: 48px;
   font-family: "Museo Sans";
   font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
-  border-radius: 48px;
+  line-height: 44px;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 8px;
+  margin-left: 15px;
 }
+
+.main__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.7s;
+}
+
+@media screen and (max-width:768px) {
+  .wrapper{
+    padding-left: 17px;
+  }
+
+  .header{
+    padding-left: 24px;
+  }
+
+  .logo {
+    background: url('img/Vector.png') no-repeat top left;
+    margin-top: 42px;
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 52px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+    right: 12%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .main__title {
+    font-size: 170px;
+    margin-top: 16px;
+  }
+
+  .main__ttl {
+    margin-top: 179px;
+    font-size: 60px;
+  }
+
+  .main__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    width: 293px;
+    height: 87px;
+    margin-top: 302px;
+    text-indent: 11px;
+    margin-left: 18px;
+  }
+
+  .main__button {
+    margin-top: 18px;
+    margin-left: 59px;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FCF5ED;
+  }
+
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 186px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #E5E5E5;
+    transition-duration: .25s;
+    z-index: 1;
+  }
+
+  .menu__item_burger {
+    position: relative;
+    color: #000;
+    font-family: 'Museo Sans';
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 24px;
+    padding-right: 16px;
+    font-weight: 700;
+    transition-duration: .25s;
+  }
+
+  .menu__item_burger:hover {
+    background-color: #E5E5E5;
+  }
+
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: black;
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: black;
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    transition-duration: .25s;
+  }
+  
+
+  .inner{
+    display: none;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  .image{
+  width: 10%;
+  background-size: cover;
+  }
+
+}
+
+@media screen and (min-width:1025px) and (max-width:1366px) {
+  .wrapper {
+    width: 89.5%;
+    float: right;
+  }
+
+  .inner{
+    width:51%;
+  }
+
+  .avatar {
+    width: 274px;
+  }  
+
+  .userpic {
+    margin-top: 2%;
+    width: 246px;
+  }
+
+  .image{
+    margin-top: 2%;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width:1500px) and (max-width:1920px) {
+  .wrapper {
+    width: 89.5%;
+    float: right;
+    margin-top: 27px;
+  }
+  
+  .logo {
+    background-size: cover;
+    width: 146px;
+    height: 55px;
+  }
+
+  .menu {
+    margin: -39px 95px 0 0;
+  }
+
+  .menu__item {
+    font-size: 22px;
+    margin-right: 34px;
+    font-weight: 700;
+  }
+
+  .main__title {
+    font-size: 280px;
+    margin-top: 182px;
+  }
+
+  .main__ttl {
+    font-size: 98px;
+    margin-top: 377px;
+    margin-left: 81px;
+  }
+
+  .main__subtitle {
+    font-size: 22px;
+    margin-top: 511px;
+    margin-left: 18px;
+    width: 551px;
+    height: 55px;
+    line-height: 26px;
+  }
+
+  .main__button {
+    width: 294px;
+    height: 62px;
+    font-size: 22px;
+    margin-top: 36px;
+    margin-left: 20px;
+    line-height: 61px;
+  }
+
+  .inner {
+    margin-top: 243px;
+    width: 51%;
+  }
+
+  .avatar {
+    width: 317px;
+    height: 422px;
+    background-size: cover;
+    margin-right: 31px;
+  }
+
+  .userpic {
+    width: 286px;
+    height: 374px;
+    background-size: cover;
+    margin-right: 32px;
+  }
+
+  .image {
+    height: 379px;
+    background-size: cover;
+    margin-top: 2.5%;
+  }
+}
+
+
+
+  
+
+
