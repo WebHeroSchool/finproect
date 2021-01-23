@@ -5,7 +5,6 @@
   width: 100%;
 }
 
-
 body {
   margin: 0;
   background: url(img/fon.png);
@@ -180,7 +179,7 @@ body {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
     right: 12%;
   }
 
@@ -248,6 +247,7 @@ body {
     text-align: center;
     background-color: #E5E5E5;
     transition-duration: .25s;
+    z-index: 1;
   }
 
   .menu__item_burger {
@@ -275,10 +275,12 @@ body {
   #menu__toggle:checked ~ .menu__btn > span::before {
     top: 0;
     transform: rotate(0);
+    background-color: black;
   }
   #menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
+    background-color: black;
   }
   #menu__toggle:checked ~ .menu__box {
     visibility: visible;
@@ -306,7 +308,106 @@ body {
 }
 
 @media screen and (min-width:1025px) and (max-width:1366px) {
+  .wrapper {
+    width: 89.5%;
+    float: right;
+  }
 
+  .inner{
+    width:51%;
+  }
+
+  .avatar {
+    width: 274px;
+  }  
+
+  .userpic {
+    margin-top: 2%;
+    width: 246px;
+  }
+
+  .image{
+    margin-top: 2%;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width:1500px) and (max-width:1920px) {
+  .wrapper {
+    width: 89.5%;
+    float: right;
+    margin-top: 27px;
+  }
+  
+  .logo {
+    background-size: cover;
+    width: 146px;
+    height: 55px;
+  }
+
+  .menu {
+    margin: -39px 95px 0 0;
+  }
+
+  .menu__item {
+    font-size: 22px;
+    margin-right: 34px;
+    font-weight: 700;
+  }
+
+  .main__title {
+    font-size: 280px;
+    margin-top: 182px;
+  }
+
+  .main__ttl {
+    font-size: 98px;
+    margin-top: 377px;
+    margin-left: 81px;
+  }
+
+  .main__subtitle {
+    font-size: 22px;
+    margin-top: 511px;
+    margin-left: 18px;
+    width: 551px;
+    height: 55px;
+    line-height: 26px;
+  }
+
+  .main__button {
+    width: 294px;
+    height: 62px;
+    font-size: 22px;
+    margin-top: 36px;
+    margin-left: 20px;
+    line-height: 61px;
+  }
+
+  .inner {
+    margin-top: 243px;
+    width: 51%;
+  }
+
+  .avatar {
+    width: 317px;
+    height: 422px;
+    background-size: cover;
+    margin-right: 31px;
+  }
+
+  .userpic {
+    width: 286px;
+    height: 374px;
+    background-size: cover;
+    margin-right: 32px;
+  }
+
+  .image {
+    height: 379px;
+    background-size: cover;
+    margin-top: 2.5%;
+  }
 }
 
 
