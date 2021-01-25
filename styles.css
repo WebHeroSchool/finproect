@@ -62,15 +62,14 @@ body {
 }
 
 .inner {
-  margin: auto;
-  margin-top: -30%;
-  width: 54%;
   display: flex;
   justify-content: space-between;
+  margin-top: 17%;
+  width: 50.5%;
 }
 
 .avatar {
-  width: 41%;
+  width: 44%;
   height: 300px;
   background-image: url(img/1.png);
   display: inline-block;
@@ -78,7 +77,7 @@ body {
   background-size: cover;
 }
 .userpic {
-  width: 36%;
+  width: 39%;
   height: 270px;
   background-image: url(img/2.png);
   display: inline-block;
@@ -157,14 +156,18 @@ body {
   transition: opacity 0.7s;
 }
 
+.contain {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width:900px) {
   .wrapper {
     padding: inherit;
-    padding-right: 4%;
   }
 
   .header {
-    padding-left: 11%;
+    padding-left: 9%;
   }
 
   .logo {
@@ -315,9 +318,14 @@ body {
   }
 }
 
+
 @media screen and (min-width:900px) and (max-width:1024px) {
+  .wrapper {
+    margin: auto;
+  }
+
   .image{
-  width: 10%;
+  width: 8%;
   background-size: cover;
   }
 
@@ -325,42 +333,61 @@ body {
 
 @media screen and (min-width:1025px) and (max-width:1366px) {
   .wrapper {
-    width: 89.5%;
+    width: 100%;
+    margin: 0;
+    padding-left: 10.5%;
+  }
+
+  .header {
+    padding-right: 15%;
+  }
+  .menu {
+    padding-top: 5.5%;
+  }
+  .main {
+    width: 30%;
   }
 
   .inner{
-    width:51%;
+    margin: 0;
+    margin-top: 13%;
+    width: 56%;
   }
 
   .avatar {
-    width: 41%;
+    width: 29%;
   }  
 
   .userpic {
     margin-top: 2%;
-    width: 36%;
+    width: 27%;
   }
 
   .image{
-    margin-top: 2%;
+    margin-top: 1.5%;
+    width: 38%;
     background-size: cover;
   }
 }
 
-@media screen and (min-width:1500px) and (max-width:1920px) {
+@media screen and (min-width:1500px) and (max-width:1925px) {
   .wrapper {
-    width: 89.5%;
-    margin-top: 27px;
+    width: 100%;
+    margin: 0;
+    padding-left: 10.5%;
   }
   
   .logo {
     background-size: cover;
     width: 146px;
     height: 55px;
+    margin-top: 5%;
   }
 
   .menu {
-    margin: -39px 95px 0 0;
+    margin-top: 5%;
+    margin-right: 10.5%;
+    padding-top: 0;
   }
 
   .menu__item {
@@ -399,8 +426,8 @@ body {
   }
 
   .inner {
-    margin-top: 243px;
-    width: 51%;
+    width: 56%;
+    margin: 12.5% 0 0 0;
   }
 
   .avatar {
@@ -421,6 +448,7 @@ body {
     height: 379px;
     background-size: cover;
     margin-top: 2.5%;
+    width: 38%;
   }
 }
 
